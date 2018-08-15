@@ -1,0 +1,24 @@
+<nav class="row d-flex justify-content-between" #navigationWrapper>
+  <div class="nav-container col-12"
+       [ngClass]="{'nav-container-lg': !burgerShown, 'nav-container-md': burgerShown}">
+    <div class="title-container" routerLink="/">
+      <span class="title">{{title}}</span>
+      <span class="sub-title">{{subTitle}}</span>
+    </div>
+    <div [hidden]="!burgerShown" (click)="burgerClicked()" class="burger-container">
+      <i>burger</i>
+    </div>
+    <nav [hidden]="burgerShown && !burgerOpened"
+         class="routes-container"
+         [ngClass]="{'routes-container-lg': !burgerShown, 'routes-container-md': burgerShown}">
+      <div class="left-side-navigation">
+        <div class="route" [routerLink]="routes[0].path">{{routes[0].name}}</div>
+        <div class="route" [routerLink]="routes[1].path">{{routes[1].name}}</div>
+      </div>
+      <div class="right-side-navigation">
+        <div class="route" [routerLink]="routes[2].path">{{routes[2].name}}</div>
+        <div class="route" [routerLink]="routes[3].path">{{routes[3].name}}</div>
+      </div>
+    </nav>
+  </div>
+</nav>

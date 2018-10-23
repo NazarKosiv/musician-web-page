@@ -1,0 +1,5 @@
+export enum POST_TYPES {
+  FACEBOOK = 'FACEBOOK',
+  YOUTUBE = 'YOUTUBE',
+  INSTAGRAM = 'INSTAGRAM'
+}

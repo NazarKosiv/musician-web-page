@@ -1,0 +1,14 @@
+<section class="row">
+  <app-post-header></app-post-header>
+  <ng-container [ngSwitch]="post.type">
+    <ng-container *ngSwitchCase="postTypes.INSTAGRAM">
+      <app-instagram-post></app-instagram-post>
+    </ng-container>
+    <ng-container *ngSwitchCase="postTypes.YOUTUBE">
+      <app-youtube-post></app-youtube-post>
+    </ng-container>
+    <ng-container *ngSwitchCase="postTypes.FACEBOOK">
+      <app-facebook-post></app-facebook-post>
+    </ng-container>
+  </ng-container>
+</section>
